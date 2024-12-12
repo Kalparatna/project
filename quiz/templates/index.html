@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+    <title>Quiz Home</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body>
+    <h1>Welcome to the Quiz App</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="topic">Enter Topic:</label>
+        <input type="text" id="topic" name="topic" required>
+        <br><br>
+        <label for="num_questions">Number of Questions:</label>
+        <input type="number" id="num_questions" name="num_questions" value="10" min="1" max="20">
+        <br><br>
+        <button type="submit">Generate Quiz</button>
+    </form>
+    
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

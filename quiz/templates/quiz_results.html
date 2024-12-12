@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Results for Topic: {{ topic }}</h1>
+    <p>Your Score: {{ score }} / {{ total_questions }}</p>
+    <h2>Review Questions</h2>
+    <ul>
+        {% for question in questions %}
+            <li>
+                <p><strong>Q{{ forloop.counter }}: {{ question.question }}</strong></p>
+                <p>Correct Answer: {{ question.correct_answer }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Return to Home</a>
+</body>
+</html>

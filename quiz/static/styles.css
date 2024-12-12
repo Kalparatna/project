@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f7fc 0%, #dfe8f7 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #333;
+}
+
+/* Header Styling */
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* Button Styling with 3D Effects */
+button {
+    background: linear-gradient(145deg, #040cae, #040cae);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0.5px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Inputs */
+input[type="text"], input[type="number"], input[type="radio"] {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #040cae;
+    box-shadow: 0 0 8px rgba(4, 12, 174, 0.5);
+    outline: none;
+}
+
+/* Card Style with 3D Shadow */
+div {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    max-width: 400px;
+    width: 100%;
+}
+
+div:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Links Styling */
+a {
+    color: #040cae;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: color 0.2s ease, transform 0.1s ease;
+}
+
+a:hover {
+    color: #020270;
+    text-decoration: underline;
+    transform: translateY(-0.5px);
+}
+
+/* 3D Form Styling */
+form {
+    display: block;
+    margin: 30px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 500px;
+    width: 100%;
+}
+
+form:hover {
+    transform: scale(1);
+}
+
+/* Section Padding */
+section {
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Smooth Transitions for All Elements */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    div {
+        max-width: 100%;
+        margin: 10px;
+    }
+    form {
+        padding: 30px;
+        max-width: 100%;
+    }
+}

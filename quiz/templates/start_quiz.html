@@ -1,0 +1,14 @@
+{% load static %}
+<html>
+<head>
+    <title>Start Quiz</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Topic: {{ topic }}</h1>
+    <p>Click below to start the quiz!</p>
+    <form method="get" action="{% url 'take_quiz' topic_id %}">
+        <button type="submit">Start Quiz</button>
+    </form>
+</body>
+</html>

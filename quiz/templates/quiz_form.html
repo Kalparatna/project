@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>Quiz"</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for question in questions %}
+        <div>
+            <h3>Question {{ forloop.counter }}: {{ question.question }}</h3>
+            <label>
+                <input type="radio" name="mcq_{{ forloop.counter }}" value="{{ question.options.0 }}" required>
+                {{ question.options.0 }}
+            </label><br>
+            <label>
+                <input type="radio" name="mcq_{{ forloop.counter }}" value="{{ question.options.1 }}">
+                {{ question.options.1 }}
+            </label><br>
+            <label>
+                <input type="radio" name="mcq_{{ forloop.counter }}" value="{{ question.options.2 }}">
+                {{ question.options.2 }}
+            </label><br>
+            <label>
+                <input type="radio" name="mcq_{{ forloop.counter }}" value="{{ question.options.3 }}">
+                {{ question.options.3 }}
+            </label>
+        </div>
+        <hr>
+        {% endfor %}
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>
